@@ -5,11 +5,9 @@ import { federation } from '@module-federation/vite';
 import packageJson from './package.json'
 const deps = packageJson.dependencies
 
-export default defineConfig(({ mode }) => {
-  const isProduction = mode === 'production';
+export default defineConfig(() => {
 
   return {
-    base: isProduction ? '/tmx-sun/' : '/',
     plugins: [
       react(),
       federation({
