@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production'; // Check if in production mode
 
   return {
-    base: isProduction ? '/https://tjmelo.github.io/tmx-sun/' : '/', // Conditional base
+    base: isProduction ? 'tmx-sun/' : '/', // Conditional base
     plugins: [
       react(),
       federation({
