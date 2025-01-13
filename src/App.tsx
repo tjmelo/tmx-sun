@@ -16,10 +16,10 @@ function App() {
           <HostMenu />
         </div>
         <div className="col-10">
-          {
-            pathname.includes('/tmx-mercury') && <TmxMercury />
-          }
-          
+          { pathname.includes('/tmx-mercury') && <TmxMercury /> }
+          { pathname.includes('/tmx-venus') && <h2>Awaiting TMX Venus component</h2> }
+          { pathname.includes('/tmx-earth') && <h2>Awaiting TMX Earth component</h2> }
+          { pathname.includes('/tmx-moon') && <h2>Awaiting TMX Moon component</h2> }
         </div>
       </div>
     </section>
