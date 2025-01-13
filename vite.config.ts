@@ -28,5 +28,8 @@ export default defineConfig({
       usePolling: true
     }
   },
+  build: {
+    target: 'chrome89',
+  },
 })
 
