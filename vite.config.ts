@@ -6,10 +6,10 @@ import packageJson from './package.json'
 const deps = packageJson.dependencies
 
 export default defineConfig(({ mode }) => {
-  const isProduction = mode === 'production'; // Check if in production mode
+  const isProduction = mode === 'production';
 
   return {
-    base: isProduction ? '/tmx-sun/' : '/', // Conditional base
+    base: isProduction ? '/tmx-sun/' : '/',
     plugins: [
       react(),
       federation({
@@ -27,13 +27,13 @@ export default defineConfig(({ mode }) => {
         },
       }),
     ],
+    build: {
+      target: 'chrome89',
+    },
     server: {
       watch: {
         usePolling: true
       }
-    },
-    build: {
-      target: 'chrome89',
     },
   };
 });

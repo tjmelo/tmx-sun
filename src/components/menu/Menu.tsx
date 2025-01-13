@@ -19,7 +19,7 @@ export const HostMenu = () => {
                         <Button 
                             variant="outlined" 
                             startIcon={<DeviceHubOutlinedIcon fontSize='small' />}>
-                            TMX Mercury
+                            Mercury
                         </Button>
                     </NavLink>
                 </li>
@@ -28,7 +28,7 @@ export const HostMenu = () => {
                         <Button 
                             variant="outlined" 
                             startIcon={<DeviceHubOutlinedIcon fontSize='small' />}>
-                            TMX Venus
+                            Venus
                         </Button>
                     </NavLink>
                 </li>
@@ -37,7 +37,7 @@ export const HostMenu = () => {
                         <Button 
                             variant="outlined" 
                             startIcon={<DeviceHubOutlinedIcon fontSize='small' />}>
-                            TMX Earth
+                            Earth
                         </Button>
                     </NavLink>
                 </li>
@@ -46,7 +46,7 @@ export const HostMenu = () => {
                         <Button 
                             variant="outlined" 
                             startIcon={<DeviceHubOutlinedIcon fontSize='small' />}>
-                            TMX Moon
+                            Moon
                         </Button>
                     </NavLink>
                 </li>
