@@ -1,1 +1,0 @@
-export { HostMenu } from './Menu'
