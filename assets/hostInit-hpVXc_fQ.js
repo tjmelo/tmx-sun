@@ -1,2 +1,0 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/remoteEntry-DQMhD1p-.js","assets/TmxHost __mf_v__runtimeInit__mf_v__-CmMDoKBk.js","assets/virtualExposes-BIHI7g3E.js","assets/preload-helper-tUwWcGhY.js"])))=>i.map(i=>d[i]);
-import{_ as i}from"./preload-helper-tUwWcGhY.js";const r=i(()=>import("./remoteEntry-DQMhD1p-.js"),__vite__mapDeps([0,1,2,3]));Promise.resolve(r).then(e=>Promise.resolve(e.__tla).then(e.init).catch(e.init));
