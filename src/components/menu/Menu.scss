@@ -4,9 +4,13 @@
     position: sticky;
     top: 0;
 
+    .Link-logo {
+        display: flex;
+        justify-content: center;
+    }
+
     ul {
         padding: 0;
-        text-align: center;
 
         li {
             list-style: none;

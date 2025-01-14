@@ -9,7 +9,9 @@ export const HostMenu = () => {
         <nav className='HostMenu'> 
             <ul>
                 <li>
-                    <img src="tmwd.png" width="25%" alt="" />
+                    <NavLink to={`/`} className="Link-logo">
+                        <img src="tmwd.png" width="25%" alt="" />
+                    </NavLink>
                 </li>
                 <li>
                     <Typography variant="caption">Lista de projetos disponíveis</Typography>
@@ -20,7 +22,7 @@ export const HostMenu = () => {
                         return (
                             <li key={menu}>
                                 <NavLink to={`/tmx-${menu.toLowerCase()}`}>
-                                    <Button 
+                                    <Button
                                         variant="outlined">
                                         {menu}
                                     </Button>
