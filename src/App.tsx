@@ -1,25 +1,24 @@
 import React from 'react'
-import './App.scss'
 import { HostMenu } from './components/menu'
 import { useLocation } from 'react-router';
+import { Empty } from './components/empty';
 const TmxMercury = React.lazy(() => import('TmxMercury/TmxMercury' as string))
 
 function App() {
   const { pathname } = useLocation();
 
-  console.log(pathname)
-
   return (
     <section className='container'>
       <div className='row'>
-        <div className="col-2">
+        <div className="col-md-2">
           <HostMenu />
         </div>
-        <div className="col-10">
+        <div className="col-md-10">
+          { pathname === '/' && <Empty /> }
           { pathname.includes('/tmx-mercury') && <TmxMercury /> }
-          { pathname.includes('/tmx-venus') && <h2>Awaiting TMX Venus component</h2> }
-          { pathname.includes('/tmx-earth') && <h2>Awaiting TMX Earth component</h2> }
-          { pathname.includes('/tmx-moon') && <h2>Awaiting TMX Moon component</h2> }
+          { pathname.includes('/tmx-venus') && <Empty /> }
+          { pathname.includes('/tmx-earth') && <Empty /> }
+          { pathname.includes('/tmx-moon') && <Empty /> }
         </div>
       </div>
     </section>
