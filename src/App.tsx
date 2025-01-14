@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.scss'
 import { HostMenu } from './components/menu'
 import { useLocation } from 'react-router';
 const TmxMercury = React.lazy(() => import('TmxMercury/TmxMercury' as string))
@@ -12,10 +11,10 @@ function App() {
   return (
     <section className='container'>
       <div className='row'>
-        <div className="col-2">
+        <div className="col-md-2">
           <HostMenu />
         </div>
-        <div className="col-10">
+        <div className="col-md-10">
           { pathname.includes('/tmx-mercury') && <TmxMercury /> }
           { pathname.includes('/tmx-venus') && <h2>Awaiting TMX Venus component</h2> }
           { pathname.includes('/tmx-earth') && <h2>Awaiting TMX Earth component</h2> }

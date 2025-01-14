@@ -1,8 +1,8 @@
 import { NavLink } from "react-router";
 import './Menu.scss';
 
-import DeviceHubOutlinedIcon from '@mui/icons-material/DeviceHubOutlined';
 import { Button, Typography } from "@mui/material";
+import { MENUS } from "../../types";
 
 export const HostMenu = () => {
     return (
@@ -14,42 +14,22 @@ export const HostMenu = () => {
                 <li>
                     <Typography variant="caption">Lista de projetos disponíveis</Typography>
                 </li>
-                <li>
-                    <NavLink to="/tmx-mercury">
-                        <Button 
-                            variant="outlined" 
-                            startIcon={<DeviceHubOutlinedIcon fontSize='small' />}>
-                            Mercury
-                        </Button>
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/tmx-venus">
-                        <Button 
-                            variant="outlined" 
-                            startIcon={<DeviceHubOutlinedIcon fontSize='small' />}>
-                            Venus
-                        </Button>
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/tmx-earth">
-                        <Button 
-                            variant="outlined" 
-                            startIcon={<DeviceHubOutlinedIcon fontSize='small' />}>
-                            Earth
-                        </Button>
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/tmx-moon">
-                        <Button 
-                            variant="outlined" 
-                            startIcon={<DeviceHubOutlinedIcon fontSize='small' />}>
-                            Moon
-                        </Button>
-                    </NavLink>
-                </li>
+                
+                {
+                    Object.keys(MENUS).map((menu) => {
+                        return (
+                            <li key={menu}>
+                                <NavLink to={`/tmx-${menu.toLowerCase()}`}>
+                                    <Button 
+                                        variant="outlined">
+                                        {menu}
+                                    </Button>
+                                </NavLink>
+                            </li>
+                        )
+                    })
+                }
+                
             </ul>
         </nav>
     )

@@ -1,5 +1,4 @@
 .HostMenu {
-    align-items: center;
     display: flex;
     justify-content: center;
     position: sticky;
@@ -12,10 +11,8 @@
         li {
             list-style: none;
             padding: .7rem;
-            
             a {
                 display: flex;
-                align-items: center;
                 gap: .2rem;
                 text-decoration: none;
             }
