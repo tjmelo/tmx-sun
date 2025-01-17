@@ -21,6 +21,13 @@
                 text-decoration: none;
             }
 
+            .active {
+                button {
+                    background: #0d6efd;
+                    color: white;
+                }
+            }
+
             button {
                 width: 100%;
             }

@@ -1,17 +1,19 @@
-import { NavLink } from "react-router";
 import './Menu.scss';
 
 import { Button, Typography } from "@mui/material";
 import { MENUS } from "../../types";
+import { useLocation } from 'react-router';
 
 export const HostMenu = () => {
+      const { pathname } = useLocation();
+
     return (
         <nav className='HostMenu'> 
             <ul>
                 <li>
-                    <NavLink to={`/`} className="Link-logo">
+                    <a href={`/`} className="Link-logo">
                         <img src="tmwd.png" width="25%" alt="" />
-                    </NavLink>
+                    </a>
                 </li>
                 <li>
                     <Typography variant="caption">Lista de projetos disponíveis</Typography>
@@ -21,17 +23,19 @@ export const HostMenu = () => {
                     Object.keys(MENUS).map((menu) => {
                         return (
                             <li key={menu}>
-                                <NavLink to={`/tmx-${menu.toLowerCase()}`}>
+                                <a 
+                                    href={`/tmx-${menu.toLowerCase()}`} 
+                                    className={pathname.includes(menu.toLowerCase()) ? 'active' : ''}
+                                >
                                     <Button
                                         variant="outlined">
                                         {menu}
                                     </Button>
-                                </NavLink>
+                                </a>
                             </li>
                         )
                     })
                 }
-                
             </ul>
         </nav>
     )

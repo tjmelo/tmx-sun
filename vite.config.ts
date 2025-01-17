@@ -14,7 +14,8 @@ export default defineConfig({
     federation({
       name: 'TmxHost ',
       remotes: {
-        TmxMercury: process.env.VITE_REMOTE_PATH ?? '',
+        TmxMercury: process.env.VITE_REMOTE_TMX_MERCURY_PATH ?? '',
+        TmxMoon: process.env.VITE_REMOTE_TMX_MOON_PATH ?? '',
       },
       shared: {
         react: {
