@@ -1,7 +1,5 @@
 import { HostMenu } from './components/menu';
 
-function App() {
-  return <HostMenu />
-}
+const App = () => <HostMenu />
 
 export default App;

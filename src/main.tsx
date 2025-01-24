@@ -3,20 +3,21 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router';
-import Client from './Client.tsx';
+import Router from './Router.tsx';
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById('host')!).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>,
-)
-
-createRoot(document.getElementById('app')!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Client />
+        <section className="container">
+            <div className="row">
+                <div className="col-md-2">
+                    <App />
+                </div>
+                <div className="col-md-10">
+                    <Router />
+                </div>
+            </div>
+        </section>
     </BrowserRouter>
   </StrictMode>,
 )
