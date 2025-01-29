@@ -20,6 +20,18 @@ function Router() {
                 <TmxMoon />
             </Suspense>
         }/>
+        <Route exact path="/tmx-venus" element={
+            <Suspense fallback={<Loading />}>
+                <iframe 
+                    src="https://tmx-shoplist.netlify.app" 
+                    title="tmx-venus"
+                    width="100%"
+                    height="150%"
+                    scrolling='no'
+                >    
+                </iframe>
+            </Suspense>
+        }/>
     </Routes>
   );
 }
