@@ -5,6 +5,7 @@ import { Loading } from './components/loading';
 
 const TmxMercury = React.lazy(() => import('TmxMercury/TmxMercury' as string));
 const TmxMoon = React.lazy(() => import('TmxMoon/TmxMoon' as string));
+const TmxEarth = React.lazy(() => import('TmxEarth/TmxEarth' as string));
 
 function Router() {
   return (
@@ -13,11 +14,6 @@ function Router() {
         <Route exact path="/tmx-mercury" element={
             <Suspense fallback={<Loading />}>
                 <TmxMercury />
-            </Suspense>
-        }/>
-        <Route exact path="/tmx-moon" element={
-            <Suspense fallback={<Loading />}>
-                <TmxMoon />
             </Suspense>
         }/>
         <Route exact path="/tmx-venus" element={
@@ -30,6 +26,16 @@ function Router() {
                     scrolling='no'
                 >    
                 </iframe>
+            </Suspense>
+        }/>
+        <Route exact path="/tmx-moon" element={
+            <Suspense fallback={<Loading />}>
+                <TmxMoon />
+            </Suspense>
+        }/>
+        <Route exact path="/tmx-earth" element={
+            <Suspense fallback={<Loading />}>
+                <TmxEarth />
             </Suspense>
         }/>
     </Routes>

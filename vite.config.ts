@@ -16,6 +16,7 @@ export default defineConfig({
       remotes: {
         TmxMercury: process.env.VITE_REMOTE_TMX_MERCURY_PATH ?? '',
         TmxMoon: process.env.VITE_REMOTE_TMX_MOON_PATH ?? '',
+        TmxEarth: process.env.VITE_REMOTE_TMX_EARTH_PATH ?? '',
       },
       shared: {
         react: {

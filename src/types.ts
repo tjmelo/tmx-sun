@@ -1,6 +1,6 @@
 export enum MENUS {
-    // EARTH='Earth',
     MERCURY='Mercury',
     VENUS='Venus',
+    EARTH='Earth',
     MOON='Moon',
 }
